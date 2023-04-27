@@ -219,7 +219,6 @@
 #include "edge-impulse-sdk/CMSIS/DSP/Include/dsp/matrix_functions.h"
 #include "edge-impulse-sdk/CMSIS/DSP/Include/dsp/complex_math_functions.h"
 #include "edge-impulse-sdk/CMSIS/DSP/Include/dsp/statistics_functions.h"
-#include "edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h"
 #include "edge-impulse-sdk/CMSIS/DSP/Include/dsp/support_functions.h"
 #include "edge-impulse-sdk/CMSIS/DSP/Include/dsp/distance_functions.h"
 #include "edge-impulse-sdk/CMSIS/DSP/Include/dsp/svm_functions.h"

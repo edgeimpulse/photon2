@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define EI_PORTING_ARDUINO
+//#define EI_PORTING_ARDUINO 1
 #define __STATIC_FORCEINLINE
 #define __STATIC_INLINE
 #define __ASM
@@ -17,6 +17,8 @@ static const float features[] = {
 };
 
 int main(int argc, char **argv) {
+
+    ei_printf("josh was here");
 
     signal_t signal;            // Wrapper for raw input buffer
     ei_impulse_result_t result; // Used to store inference output
