@@ -1,18 +1,21 @@
-/*
- * Project pei
- * Description:
- * Author:
- * Date:
- */
 
-// setup() runs once, when the device is first turned on.
-void setup() {
-  // Put initialization like pinMode and begin functions here.
 
+#include "ADXL362.h"
+#define ADXL362_DEBUG
+
+ADXL362 adxl362;
+
+void setup()
+{
+   adxl362.begin();
 }
 
-// loop() runs over and over again, as quickly as it can execute.
-void loop() {
-  // The core of your code will likely live here.
+void loop()
+{
+  int x, y, z;
 
+  adxl362.readXYZmg(x, y, z);
+
+  Serial.printlnf("x: %d, y: %d, z: %d", x, y, z);
+  delay(500);
 }
