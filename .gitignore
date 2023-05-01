@@ -41,3 +41,16 @@ bin/.cicd-container-hash
 openapitools.json
 .terraform.lock.hcl
 terraform.tfstate*
+target/5.3.1/p2/obj/src/module_info.o
+target/5.3.1/p2/obj/src/newlib_stubs.o
+target/5.3.1/p2/obj/src/user_export.o
+target/5.3.1/p2/obj/src/user_module.o
+target/5.3.1/p2/pei.bin.no_crc
+target/5.3.1/p2/pei.dfu
+target/5.3.1/p2/pei.elf
+target/5.3.1/p2/pei.hex
+target/5.3.1/p2/pei.lst
+target/5.3.1/p2/pei.map
+target/5.3.1/p2/pei.bin.no_crc
+target/5.3.1/p2/pei.bin
+target/5.3.1/p2/obj/src/user_module.o
