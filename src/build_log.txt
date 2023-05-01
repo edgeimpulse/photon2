@@ -1,0 +1,313 @@
+ *  Executing task: make -f '/Users/joshuabuck/.particle/toolchains/buildscripts/1.11.0/Makefile' compile-all -s 
+
+pyenv shell 3.8.10
+
+:::: COMPILING APPLICATION & DEVICE OS
+
+  /Users/joshuabuck/.particle/toolchains/deviceOS/5.3.1/modules/tron/system-part1/makefile /Users/joshuabuck/.particle/toolchains/deviceOS/5.3.1/modules/tron/user-part/makefile
+   text    data     bss     dec     hex filename
+ 982378   24228   80490 1087096  109678 ../../../build/target/system-part1/platform-32-m/system-part1.elf
+Creating /Users/joshuabuck/git/particle-edge-impulse/pei/target/5.3.1/p2/memory_platform_user.ld ...
+/Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:4: warning: "__STATIC_INLINE" redefined
+    4 | #define __STATIC_INLINE
+      | 
+In file included from ../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_compiler.h:48,
+                 from ../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/core_armv8mml.h:160,
+                 from ../hal/src/rtl872x/interrupts_irq.h:72,
+                 from ../hal/src/rtl872x/platform_headers.h:13,
+                 from ./inc/application.h:38,
+                 from ./inc/Particle.h:5,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/pei.cpp:5:
+../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_gcc.h:42: note: this is the location of the previous definition
+   42 |   #define __STATIC_INLINE           static inline   __attribute__((always_inline))
+      | 
+/Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:5: warning: "__ASM" redefined
+    5 | #define __ASM
+      | 
+In file included from ../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_compiler.h:48,
+                 from ../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/core_armv8mml.h:160,
+                 from ../hal/src/rtl872x/interrupts_irq.h:72,
+                 from ../hal/src/rtl872x/platform_headers.h:13,
+                 from ./inc/application.h:38,
+                 from ./inc/Particle.h:5,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/pei.cpp:5:
+../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_gcc.h:36: note: this is the location of the previous definition
+   36 |   #define __ASM                     __asm
+      | 
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:21,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/model-parameters/model_metadata.h:114:140: warning: "EI_CLASSIFIER_USE_FULL_TFLITE" is not defined, evaluates to 0 [-Wundef]
+  114 | #if ((EI_CLASSIFIER_INFERENCING_ENGINE == EI_CLASSIFIER_TFLITE) ||      (EI_CLASSIFIER_INFERENCING_ENGINE == EI_CLASSIFIER_DRPAI)) &&      EI_CLASSIFIER_USE_FULL_TFLITE == 1
+      |                                                                                                                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/../porting/ei_classifier_porting.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/memory.hpp:24,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/ei_alloc.h:26,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/ei_vector.h:26,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/numpy.hpp:33,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_model_types.h:24,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:21,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/tensorflow/lite/micro/debug_log.h:21:29: warning: "EI_C_LINKAGE" is not defined, evaluates to 0 [-Wundef]
+   21 | #if defined(__cplusplus) && EI_C_LINKAGE == 1
+      |                             ^~~~~~~~~~~~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/memory.hpp:24,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/ei_alloc.h:26,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/ei_vector.h:26,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/numpy.hpp:33,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_model_types.h:24,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:21,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/../porting/ei_classifier_porting.h:25:29: warning: "EI_C_LINKAGE" is not defined, evaluates to 0 [-Wundef]
+   25 | #if defined(__cplusplus) && EI_C_LINKAGE == 1
+      |                             ^~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/../porting/ei_classifier_porting.h:117:29: warning: "EI_C_LINKAGE" is not defined, evaluates to 0 [-Wundef]
+  117 | #if defined(__cplusplus) && EI_C_LINKAGE == 1
+      |                             ^~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/../porting/ei_classifier_porting.h:139:60: error: operator '&&' has no right operand
+  139 | #if defined(CONFIG_IDF_TARGET_ESP32) && EI_PORTING_ARDUINO == 0
+      |                                                            ^~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/arm_math.h:210,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/numpy.hpp:46,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_model_types.h:24,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:21,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/arm_math_types.h:100:5: warning: "__ARM_FEATURE_MVE" is not defined, evaluates to 0 [-Wundef]
+  100 | #if __ARM_FEATURE_MVE
+      |     ^~~~~~~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/arm_math_types.h:106:6: warning: "__ARM_FEATURE_MVE" is not defined, evaluates to 0 [-Wundef]
+  106 | #if (__ARM_FEATURE_MVE & 2)
+      |      ^~~~~~~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/arm_math_types.h:247:5: warning: "__ARM_FEATURE_MVE" is not defined, evaluates to 0 [-Wundef]
+  247 | #if __ARM_FEATURE_MVE
+      |     ^~~~~~~~~~~~~~~~~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:21,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_model_types.h:25:5: warning: "EI_CLASSIFIER_USE_FULL_TFLITE" is not defined, evaluates to 0 [-Wundef]
+   25 | #if EI_CLASSIFIER_USE_FULL_TFLITE
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/speechpy/feature.hpp:24,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/speechpy/speechpy.hpp:22,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/speechpy/functions.hpp:37:5: warning: "EI_PORTING_RENESASRA65" is not defined, evaluates to 0 [-Wundef]
+   37 | #if EI_PORTING_RENESASRA65 == 1
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:27:29: warning: "EI_C_LINKAGE" is not defined, evaluates to 0 [-Wundef]
+   27 | #if defined(__cplusplus) && EI_C_LINKAGE == 1
+      |                             ^~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:66:5: warning: "EI_DSP_PARAMS_SPECTRAL_ANALYSIS_ANALYSIS_TYPE_WAVELET" is not defined, evaluates to 0 [-Wundef]
+   66 | #if EI_DSP_PARAMS_SPECTRAL_ANALYSIS_ANALYSIS_TYPE_WAVELET || EI_DSP_PARAMS_ALL
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:66:62: warning: "EI_DSP_PARAMS_ALL" is not defined, evaluates to 0 [-Wundef]
+   66 | #if EI_DSP_PARAMS_SPECTRAL_ANALYSIS_ANALYSIS_TYPE_WAVELET || EI_DSP_PARAMS_ALL
+      |                                                              ^~~~~~~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:96:33: warning: "EI_DSP_PARAMS_ALL" is not defined, evaluates to 0 [-Wundef]
+   96 | #if !EI_DSP_PARAMS_GENERATED || EI_DSP_PARAMS_ALL || !(EI_DSP_PARAMS_SPECTRAL_ANALYSIS_ANALYSIS_TYPE_FFT || EI_DSP_PARAMS_SPECTRAL_ANALYSIS_ANALYSIS_TYPE_WAVELET)
+      |                                 ^~~~~~~~~~~~~~~~~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:349:29: warning: "EI_C_LINKAGE" is not defined, evaluates to 0 [-Wundef]
+  349 | #if defined(__cplusplus) && EI_C_LINKAGE == 1
+      |                             ^~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:620:29: warning: "EI_C_LINKAGE" is not defined, evaluates to 0 [-Wundef]
+  620 | #if defined(__cplusplus) && EI_C_LINKAGE == 1
+      |                             ^~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:934:29: warning: "EI_C_LINKAGE" is not defined, evaluates to 0 [-Wundef]
+  934 | #if defined(__cplusplus) && EI_C_LINKAGE == 1
+      |                             ^~~~~~~~~~~~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:64:5: warning: "ECM3532" is not defined, evaluates to 0 [-Wundef]
+   64 | #if ECM3532
+      |     ^~~~~~~
+In file included from ../hal/src/rtl872x/pinmap_impl.h:54,
+                 from ../hal/inc/pinmap_hal.h:77,
+                 from ../hal/inc/interrupts_hal.h:39,
+                 from ../wiring/inc/spark_wiring.h:29,
+                 from ./inc/application.h:42,
+                 from ./inc/Particle.h:5,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/pei.cpp:5:
+../hal/src/tron/pinmap_defines.h:36:29: error: expected unqualified-id before numeric constant
+   36 | #define D11                 11
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:57:29: note: in expansion of macro 'D11'
+   57 | #define A0                  D11
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:158:17: note: in expansion of macro 'A0'
+  158 |           q15_t A0;           /**< The derived gain, A0 = Kp + Ki + Kd . */
+      |                 ^~
+../hal/src/tron/pinmap_defines.h:37:29: error: expected unqualified-id before numeric constant
+   37 | #define D12                 12
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:58:29: note: in expansion of macro 'D12'
+   58 | #define A1                  D12
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:163:17: note: in expansion of macro 'A1'
+  163 |           q31_t A1;           /**< The derived gain A1 = -Kp - 2Kd | Kd.*/
+      |                 ^~
+../hal/src/tron/pinmap_defines.h:36:29: error: expected unqualified-id before numeric constant
+   36 | #define D11                 11
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:57:29: note: in expansion of macro 'D11'
+   57 | #define A0                  D11
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:176:17: note: in expansion of macro 'A0'
+  176 |           q31_t A0;            /**< The derived gain, A0 = Kp + Ki + Kd . */
+      |                 ^~
+../hal/src/tron/pinmap_defines.h:37:29: error: expected unqualified-id before numeric constant
+   37 | #define D12                 12
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:58:29: note: in expansion of macro 'D12'
+   58 | #define A1                  D12
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:177:17: note: in expansion of macro 'A1'
+  177 |           q31_t A1;            /**< The derived gain, A1 = -Kp - 2Kd. */
+      |                 ^~
+../hal/src/tron/pinmap_defines.h:38:29: error: expected unqualified-id before numeric constant
+   38 | #define D13                 13
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:59:29: note: in expansion of macro 'D13'
+   59 | #define A2                  D13
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:178:17: note: in expansion of macro 'A2'
+  178 |           q31_t A2;            /**< The derived gain, A2 = Kd . */
+      |                 ^~
+../hal/src/tron/pinmap_defines.h:36:29: error: expected unqualified-id before numeric constant
+   36 | #define D11                 11
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:57:29: note: in expansion of macro 'D11'
+   57 | #define A0                  D11
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:190:21: note: in expansion of macro 'A0'
+  190 |           float32_t A0;          /**< The derived gain, A0 = Kp + Ki + Kd . */
+      |                     ^~
+../hal/src/tron/pinmap_defines.h:37:29: error: expected unqualified-id before numeric constant
+   37 | #define D12                 12
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:58:29: note: in expansion of macro 'D12'
+   58 | #define A1                  D12
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:191:21: note: in expansion of macro 'A1'
+  191 |           float32_t A1;          /**< The derived gain, A1 = -Kp - 2Kd. */
+      |                     ^~
+../hal/src/tron/pinmap_defines.h:38:29: error: expected unqualified-id before numeric constant
+   38 | #define D13                 13
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:59:29: note: in expansion of macro 'D13'
+   59 | #define A2                  D13
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:192:21: note: in expansion of macro 'A2'
+  192 |           float32_t A2;          /**< The derived gain, A2 = Kd . */
+      |                     ^~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h: In function 'float32_t arm_pid_f32(arm_pid_instance_f32*, float32_t)':
+../hal/src/tron/pinmap_defines.h:36:29: error: expected unqualified-id before numeric constant
+   36 | #define D11                 11
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:57:29: note: in expansion of macro 'D11'
+   57 | #define A0                  D11
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:275:15: note: in expansion of macro 'A0'
+  275 |     out = (S->A0 * in) +
+      |               ^~
+In file included from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/arm_math.h:222,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/dsp/numpy.hpp:46,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_model_types.h:24,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_dsp.h:21,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/classifier/ei_run_classifier.h:23,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei/src/pei.ino:9:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:275:15: error: expected ')' before numeric constant
+  275 |     out = (S->A0 * in) +
+      |           ~   ^
+      |               )
+In file included from ../hal/src/rtl872x/pinmap_impl.h:54,
+                 from ../hal/inc/pinmap_hal.h:77,
+                 from ../hal/inc/interrupts_hal.h:39,
+                 from ../wiring/inc/spark_wiring.h:29,
+                 from ./inc/application.h:42,
+                 from ./inc/Particle.h:5,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/pei.cpp:5:
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h: In function 'q31_t arm_pid_q31(arm_pid_instance_q31*, q31_t)':
+../hal/src/tron/pinmap_defines.h:36:29: error: expected unqualified-id before numeric constant
+   36 | #define D11                 11
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:57:29: note: in expansion of macro 'D11'
+   57 | #define A0                  D11
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:309:22: note: in expansion of macro 'A0'
+  309 |     acc = (q63_t) S->A0 * in;
+      |                      ^~
+../hal/src/tron/pinmap_defines.h:37:29: error: expected unqualified-id before numeric constant
+   37 | #define D12                 12
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:58:29: note: in expansion of macro 'D12'
+   58 | #define A1                  D12
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:312:23: note: in expansion of macro 'A1'
+  312 |     acc += (q63_t) S->A1 * S->state[0];
+      |                       ^~
+../hal/src/tron/pinmap_defines.h:38:29: error: expected unqualified-id before numeric constant
+   38 | #define D13                 13
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:59:29: note: in expansion of macro 'D13'
+   59 | #define A2                  D13
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:315:23: note: in expansion of macro 'A2'
+  315 |     acc += (q63_t) S->A2 * S->state[1];
+      |                       ^~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h: In function 'q15_t arm_pid_q15(arm_pid_instance_q15*, q15_t)':
+../hal/src/tron/pinmap_defines.h:36:29: error: expected unqualified-id before numeric constant
+   36 | #define D11                 11
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:57:29: note: in expansion of macro 'D11'
+   57 | #define A0                  D11
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:358:40: note: in expansion of macro 'A0'
+  358 |     acc = (q31_t) __SMUAD((uint32_t)S->A0, (uint32_t)in);
+      |                                        ^~
+../hal/src/tron/pinmap_defines.h:37:29: error: expected unqualified-id before numeric constant
+   37 | #define D12                 12
+      |                             ^~
+../hal/src/tron/pinmap_defines.h:58:29: note: in expansion of macro 'D12'
+   58 | #define A1                  D12
+      |                             ^~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:361:40: note: in expansion of macro 'A1'
+  361 |     acc = (q63_t)__SMLALD((uint32_t)S->A1, (uint32_t)read_q15x2 (S->state), (uint64_t)acc);
+      |                                        ^~
+In file included from ../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_compiler.h:48,
+                 from ../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/core_armv8mml.h:160,
+                 from ../hal/src/rtl872x/interrupts_irq.h:72,
+                 from ../hal/src/rtl872x/platform_headers.h:13,
+                 from ./inc/application.h:38,
+                 from ./inc/Particle.h:5,
+                 from /Users/joshuabuck/git/particle-edge-impulse/pei//src/pei.cpp:5:
+../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_gcc.h:1022:28: error: expected ')' before ':' token
+ 1022 |   __ASM ("ssat %0, %1, %2" : "=r" (__RES) :  "I" (ARG2), "r" (__ARG1) ); \
+      |         ~                  ^
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:375:20: note: in expansion of macro '__SSAT'
+  375 |     out = (q15_t) (__SSAT((q31_t)(acc >> 15), 16));
+      |                    ^~~~~~
+../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_gcc.h:1022:10: warning: statement has no effect [-Wunused-value]
+ 1022 |   __ASM ("ssat %0, %1, %2" : "=r" (__RES) :  "I" (ARG2), "r" (__ARG1) ); \
+      |         ~^~~~~~~~~~~~~~~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:375:20: note: in expansion of macro '__SSAT'
+  375 |     out = (q15_t) (__SSAT((q31_t)(acc >> 15), 16));
+      |                    ^~~~~~
+../third_party/ambd_sdk/ambd_sdk/component/soc/realtek/amebad/cmsis/cmsis_gcc.h:1021:18: warning: unused variable '__ARG1' [-Wunused-variable]
+ 1021 |   int32_t __RES, __ARG1 = (ARG1); \
+      |                  ^~~~~~
+/Users/joshuabuck/git/particle-edge-impulse/pei//src/edge-impulse-sdk/CMSIS/DSP/Include/dsp/controller_functions.h:375:20: note: in expansion of macro '__SSAT'
+  375 |     out = (q15_t) (__SSAT((q31_t)(acc >> 15), 16));
+      |                    ^~~~~~
+make[3]: *** [../build/target/user/platform-32-m/pei/src/pei.o] Error 1
+make[2]: *** [user] Error 2
+make[1]: *** [/Users/joshuabuck/.particle/toolchains/deviceOS/5.3.1/modules/tron/user-part/makefile] Error 2
+make: *** [compile-all] Error 2
+
+ *  The terminal process "/bin/bash '-c', 'make -f '/Users/joshuabuck/.particle/toolchains/buildscripts/1.11.0/Makefile' compile-all -s'" terminated with exit code: 2. 
+ *  Press any key to close the terminal. 
