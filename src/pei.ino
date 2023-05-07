@@ -52,7 +52,12 @@ unsigned long stateTime = 0;
 size_t totalSent;
 
 void setup() {
+
 	Serial.begin(9600);
+
+	delay(5000);
+
+	Serial.println("hello!");
 
 	accel.softReset();
 
