@@ -16,7 +16,7 @@
 
 /* Includes ---------------------------------------------------------------- */
 #include <Tutorial_Continuous_motion_recognition_inferencing.h>
-#include <Particle.h> //Click here to get the library: http://librarymanager/All#Arduino_LSM9DS1
+#include <Arduino_LSM9DS1.h> //Click here to get the library: http://librarymanager/All#Arduino_LSM9DS1
 
 /* Constant defines -------------------------------------------------------- */
 #define CONVERT_G_TO_MS2    9.80665f
