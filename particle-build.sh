@@ -53,6 +53,6 @@ set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 echo "Command" $PART_COMMAND
 
 # use for clean
-# make -f $HOME/.particle/toolchains/buildscripts/1.11.0/Makefile clean-user DEVICE_OS_PATH=$HOME/.particle/toolchains/deviceOS/5.3.1/ PLATFORM_ID=32
+# make -f $HOME/.particle/toolchains/buildscripts/1.11.0/Makefile clean-all DEVICE_OS_PATH=$HOME/.particle/toolchains/deviceOS/5.3.1/ PLATFORM_ID=32
 
-make -f $HOME/.particle/toolchains/buildscripts/1.11.0/Makefile $PART_COMMAND -s DEVICE_OS_PATH=$HOME/.particle/toolchains/deviceOS/5.3.1/ PLATFORM=5.3.1/p2 PLATFORM_ID=32 APPDIR=${PWD} EXTRA_CFLAGS="-DEIDSP_USE_CMSIS_DSP=1 -D__STATIC_FORCEINLINE='__attribute__((always_inline)) static inline'"
+make -f $HOME/.particle/toolchains/buildscripts/1.11.0/Makefile $PART_COMMAND -s DEVICE_OS_PATH=$HOME/.particle/toolchains/deviceOS/5.3.1/ PLATFORM=5.3.1/p2 PLATFORM_ID=32 APPDIR=${PWD} EXTRA_CFLAGS="-DEIDSP_USE_CMSIS_DSP=1 -D__STATIC_FORCEINLINE='__attribute__((always_inline)) static inline' -DEI_PORTING_PARTICLE=1 -DEIDSP_LOAD_CMSIS_DSP_SOURCES=1"
