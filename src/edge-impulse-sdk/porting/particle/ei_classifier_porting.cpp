@@ -16,9 +16,9 @@
  */
 
 #include "../ei_classifier_porting.h"
-#if EI_PORTING_ARDUINO == 1
+#if EI_PORTING_PARTICLE == 1
 
-#include <Arduino.h>
+#include <Particle.h>
 #include <stdarg.h>
 #include <stdlib.h>
 
@@ -99,4 +99,4 @@ __attribute__((weak)) void DebugLog(const char* s) {
     ei_printf("%s", s);
 }
 
-#endif // EI_PORTING_ARDUINO == 1
+#endif // EI_PORTING_PARTICLE == 1
