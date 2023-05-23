@@ -5,9 +5,16 @@ set -e
 ###############################################################################
 COMMAND=$1
 
+DEVICE="p2"
+DEVICE_ID="32"
+DEVICE_OS_VERSION="5.3.1"
+BUILD_PATH=$HOME/.particle/toolchains/deviceOS/$DEVICE_OS_VERSION/
+BUILDSCRIPT="$HOME/.particle/toolchains/buildscripts/1.11.0/Makefile"
+PROJECT_PATH=${PWD}
+
 ################################ Parse args ###################################
 PART_COMMAND=0
-
+CLEAN=0
 
 POSITIONAL_ARGS=()
 
@@ -19,6 +26,7 @@ while [[ $# -gt 0 ]]; do
       ;;
     --clean)
       PART_COMMAND="clean-user"
+      CLEAN=1
       shift # past argument
       ;;
     --flash)
@@ -31,6 +39,7 @@ while [[ $# -gt 0 ]]; do
       ;;
     --clean-all)
       PART_COMMAND="clean-all"
+      CLEAN=1
       shift # past argument
       ;;
     --flash-all)
@@ -50,9 +59,18 @@ done
 
 set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
 
-echo "Command" $PART_COMMAND
 
-# use for clean
-# make -f $HOME/.particle/toolchains/buildscripts/1.11.0/Makefile clean-all DEVICE_OS_PATH=$HOME/.particle/toolchains/deviceOS/5.3.1/ PLATFORM_ID=32
+# Application flags
+APP_FLAGS="-DEIDSP_USE_CMSIS_DSP=1 "
+APP_FLAGS+="-D__STATIC_FORCEINLINE='__attribute__((always_inline)) static inline' "
+APP_FLAGS+="-DEI_PORTING_PARTICLE=1 "
+APP_FLAGS+="-DEIDSP_LOAD_CMSIS_DSP_SOURCES=1"
 
-make -f $HOME/.particle/toolchains/buildscripts/1.11.0/Makefile $PART_COMMAND -s DEVICE_OS_PATH=$HOME/.particle/toolchains/deviceOS/5.3.1/ PLATFORM=5.3.1/p2 PLATFORM_ID=32 APPDIR=${PWD} EXTRA_CFLAGS="-DEIDSP_USE_CMSIS_DSP=1 -D__STATIC_FORCEINLINE='__attribute__((always_inline)) static inline' -DEI_PORTING_PARTICLE=1 -DEIDSP_LOAD_CMSIS_DSP_SOURCES=1"
+
+if [[ $CLEAN -eq 1 ]]
+then
+    # Clean requires trimmed down command
+    make -f $BUILDSCRIPT clean-all DEVICE_OS_PATH=$BUILD_PATH PLATFORM_ID=32
+else
+    make -f $BUILDSCRIPT $PART_COMMAND -s DEVICE_OS_PATH=$BUILD_PATH PLATFORM=$DEVICE_OS_VERSION/$DEVICE PLATFORM_ID=$DEVICE_ID APPDIR=$PROJECT_PATH EXTRA_CFLAGS="$APP_FLAGS"
+fi
