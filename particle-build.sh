@@ -8,9 +8,11 @@ COMMAND=$1
 DEVICE="p2"
 DEVICE_ID="32"
 DEVICE_OS_VERSION="5.3.1"
-BUILD_PATH=$HOME/.particle/toolchains/deviceOS/$DEVICE_OS_VERSION/
+BUILD_PATH=$HOME/.particle/toolchains/deviceOS/$DEVICE_OS_VERSION
 BUILDSCRIPT="$HOME/.particle/toolchains/buildscripts/1.11.0/Makefile"
 PROJECT_PATH=${PWD}
+PROJECT=${PWD##*/}          # to assign to a variable
+PROJECT=${PROJECT:-/}        # to correct for the case where PWD=/
 
 ################################ Parse args ###################################
 PART_COMMAND=0
@@ -71,6 +73,7 @@ if [[ $CLEAN -eq 1 ]]
 then
     # Clean requires trimmed down command
     make -f $BUILDSCRIPT clean-all DEVICE_OS_PATH=$BUILD_PATH PLATFORM_ID=32
+    rm -rf "$BUILD_PATH/build/target/user/platform-32-m/$PROJECT"
 else
     make -f $BUILDSCRIPT $PART_COMMAND -s DEVICE_OS_PATH=$BUILD_PATH PLATFORM=$DEVICE_OS_VERSION/$DEVICE PLATFORM_ID=$DEVICE_ID APPDIR=$PROJECT_PATH EXTRA_CFLAGS="$APP_FLAGS"
 fi
